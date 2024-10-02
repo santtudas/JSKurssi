@@ -235,6 +235,27 @@
 				let element = document.querySelector('#carimage');
 				element.remove();
 			})
+
+			function insertRows() {
+				let table = document.querySelector('#data');
+				let row = table.insertRow(-1);
+
+				let name = document.querySelector('#textfield').value;
+        let position = document.querySelector('#textfield2').value;
+        let salary = document.querySelector('#textfield3').value;
+
+				let cell1 = row.insertCell(0);
+				let cell2 = row.insertCell(1);
+				let cell3 = row.insertCell(2);
+
+				cell1.innerHTML = name
+				cell2.innerHTML = position
+				cell3.innerHTML = salary
+
+				document.querySelector('#textfield').value = "";
+        document.querySelector('#textfield2').value = "";
+        document.querySelector('#textfield3').value = "";
+			}
 		</script>
 
 	</body>
