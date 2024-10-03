@@ -50,7 +50,7 @@
 		  <li>Second checkbox should return the visibility of the element to a normal state (block).</li>
 		  <li>Third checkbox should find the elements with class &quot;surprise&quot; and change the font size to 20.</li>
 		</ul>
-		<div id="me" class="red-box"></div>
+		<div id="me" class="red-box" style="height: 10px; background-color: blue;"></div>
 		<p>&nbsp;</p>
 		<hr/>
 		<h2>Exercise 3: Images and pulldowns</h2>
@@ -169,12 +169,10 @@
 			}
 			
 			function hide() {
-				console.log("Hoi maailma"); //en ymmärrä tehtävää, tällä testasin ajaako function (ajaa)
 				document.querySelector('#me').style.display = "none";
 			}
 
 			function show() {
-				console.log("Hoi maailma"); //en ymmärrä tehtävää, tällä testasin ajaako function (ajaa)
 				document.querySelector('#me').style.display = "block";
 			}
 
@@ -204,9 +202,9 @@
 
 			function changePosition() {
 				let carImage = document.querySelector('#carimage');
-				carImage.style.position = "absolute";
+				carImage.style.position = "relative";
 				carImage.style.left = "200px";
-				carImage.style.top = "1200px";
+				carImage.style.top = "500px";
 			}
 
 			let position = 0;
@@ -215,7 +213,7 @@
 
 			function doMove() {
 				let carImage = document.querySelector('#carimage');
-				carImage.style.position = 'absolute'; 
+				carImage.style.position = 'relative'; 
 				position += 2 * direction;
 				if (position >= maxRight || position <= 0) {
 						direction *= -1;
